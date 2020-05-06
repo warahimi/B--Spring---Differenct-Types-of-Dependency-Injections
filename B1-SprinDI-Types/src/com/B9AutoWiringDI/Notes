@@ -1,1 +1,17 @@
-Auto Wiring:
+Spring Auto Wiring:
+How to inject and object inside a bean implicitly, that is we will not provide the information using the <property> or 
+<constructor-arg> in our xml file. here object will be injected inside the bean implicitly.
+-Autowiring means injecting the object dependency implicitly. it internally uses setter/constructor injection
+-Autowiring work with reference type only (objective type), it can not be used to inject primitive and String values
+- by default it is disabled in the Spring framework 
+-Autowiring can be performed either using "autowire" attribute  in <bean> or by using @Autowired annotation
+
+
+Autowiring Modes:
+1-no:		by default it is no. mean no autowiring
+2-byName:	injects the object dependency by bean name. property name inside class and the bean name must be the same
+and this will call the setter method to perform the object injection
+3-byType:	inject according to the bean type and the dependency type inside the class. property name and the bean name 
+can be differen. calls setter method
+4-constructor:	injects by calling the constructor. it calls the contructor having the large number of parameters
+it uses constructor injection
