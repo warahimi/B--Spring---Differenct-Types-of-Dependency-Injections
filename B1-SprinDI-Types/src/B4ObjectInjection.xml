@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+<!-- How inject a dependent object into a bean using ref in property -->
+        
+<bean id= "address" class="com.B4ObjectInjectionUsingSetter.Address">
+	<property name="street" value="1455 NE Brandi Way"></property>
+	<property name="city" value="Pullman"></property>
+	<property name="state" value="WA"></property>
+</bean>
+
+<bean id="emp" class="com.B4ObjectInjectionUsingSetter.Employee">
+	<property name="id" value="101"></property>
+	<property name="name" value="Wahidullah Rahimi"></property>
+	<property name="address" ref="address"></property> <!-- we use ref insted of value because it is a relationship between 2 beans -->
+</bean>
+
+
+
+</beans>

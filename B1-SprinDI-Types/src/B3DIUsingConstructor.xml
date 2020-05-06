@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+<bean id="emp" class="com.B3DIUsingConstructor.Employee">
+	<constructor-arg value="101"></constructor-arg> <!-- in constructor DI we dont need to give the name="" -->
+	<constructor-arg value="Wahidullah Rahimi"></constructor-arg>
+</bean>
+
+
+
+</beans>

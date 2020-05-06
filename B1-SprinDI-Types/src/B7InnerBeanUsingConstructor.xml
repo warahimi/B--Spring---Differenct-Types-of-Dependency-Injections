@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+<!-- How inject a dependent object into a bean using ref in property -->
+        
+
+
+<bean id="emp" class="com.B7InnerBeanUsingConstructor.Employee">
+	<constructor-arg value="101"></constructor-arg>
+	<constructor-arg value="Wahidullah Rahimi"></constructor-arg>
+	<constructor-arg>
+		<bean class="com.B7InnerBeanUsingConstructor.Address">
+			<constructor-arg value="1455 NE"></constructor-arg>
+			<constructor-arg value="Pullman"></constructor-arg>
+			<constructor-arg value="WA"></constructor-arg>
+		</bean>
+	</constructor-arg>
+</bean>
+
+
+
+</beans>
