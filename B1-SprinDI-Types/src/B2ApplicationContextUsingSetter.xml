@@ -6,7 +6,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
         
         
-<bean id="emp" class="com.B2ApplicationContext.Employee">
+<bean id="emp" class="com.B2ApplicationContextUsingSetter.Employee">
 	<property name="id" value="101"></property>
 	<property name="name" value="Wahidullah Rhaimi"></property>
 </bean>

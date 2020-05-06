@@ -1,4 +1,4 @@
-package com.B2ApplicationContext;
+package com.B2ApplicationContextUsingSetter;
 
 public class Employee {
 	private int id;
