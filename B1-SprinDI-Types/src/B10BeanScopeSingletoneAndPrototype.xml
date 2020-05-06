@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+
+<!--  <bean id="emp" class="com.B10BeanScopesSingletoneAndPrototype.Employee" scope="singleton"> --> <!-- if we dont specify andy scope here by default it is singleton -->
+<bean id="emp" class="com.B10BeanScopesSingletoneAndPrototype.Employee" scope="prototype"> <!-- now spring container returns a new bean instance every time a request is make (getBean) is called -->
+	<!-- we will inject the values using this bean in the main app -->
+</bean>        
+
+
+
+
+</beans>

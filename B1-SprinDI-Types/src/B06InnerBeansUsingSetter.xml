@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+<!-- How inject a dependent object into a bean using ref in property -->
+
+<!-- Inner Bean is bean which is declared in the scope of another bean -->
+<!-- as the address bean is not used by any other beans. it is used on once in the property of emp bean -->
+<!-- we can declare the address inside the emp bean in its property with our id as an annonymouse bean. beacaue it is used once -->
+<!-- Encapsulation: we must limit the scope of beans if they are not used by other beans, rather than decalring them ourside seperately -->
+        
+
+
+<bean id="emp" class="com.B06InnerBeanUsingSetter.Employee">
+	<property name="id" value="101"></property>
+	<property name="name" value="Wahidullah Rahimi"></property>
+	<property name="address">
+		<bean class="com.B06InnerBeanUsingSetter.Address"> <!-- this is annonymouse inner bean, it is in the scope of emo bean only -->
+			<property name="street" value="1455 NE Brandi Way"></property>
+			<property name="city" value="Pullman"></property>
+			<property name="state" value="WA"></property>
+		</bean>
+	</property> 
+</bean>
+
+
+
+</beans>

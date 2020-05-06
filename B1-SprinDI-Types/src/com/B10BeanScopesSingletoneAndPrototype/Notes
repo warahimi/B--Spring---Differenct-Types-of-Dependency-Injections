@@ -1,0 +1,3 @@
+A bean can have difference scopes such as Singletone, Prototype, Request..etc
+1-Singleton: only one instance of bean/class will be created, per spring container
+2-Prototyp: a new instance of bean is created on each reques
