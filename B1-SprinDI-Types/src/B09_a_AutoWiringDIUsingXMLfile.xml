@@ -7,13 +7,13 @@
         
 
         
-<bean id= "address" class="com.B09AutoWiringDI.Address">
+<bean id= "address" class="com.B09_a_AutoWiringDIUsingXmlFile.Address">
 	<property name="street" value="1455 NE Brandi Way"></property>
 	<property name="city" value="Pullman"></property>
 	<property name="state" value="WA"></property>
 </bean>
 
-<bean id="emp" class="com.B09AutoWiringDI.Employee" autowire="byName">
+<bean id="emp" class="com.B09_a_AutoWiringDIUsingXmlFile.Employee" autowire="byName">
 	<property name="id" value="101"></property>
 	<property name="name" value="Wahidullah Rahimi"></property>
 </bean>

@@ -1,0 +1,8 @@
+@ Qualifer is used with @Autowired annotation.
+if we have multiple instances/beans of an objective dependecies in xml file then we can specify which bean id
+to be injected to the objective type dependency 
+
+@Resource- JSR-250 can be an alternative as @qualifer and @autowired
+Java Specification Request (JSR): these annotations belong to Java not Spring (they come from Javax package) not String package
+
+@PreDestroy and @PostConstruct are also JSR annotations

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd"
+        default-init-method="init" default-destroy-method="destroy">
+
+	<context:annotation-config/>
+        
+	
+<!-- Here we have multiple beans of objective type dependency. so Spring will confused which one to Autowire/inject-->
+<!-- we can tell Spring a specific inner bean to be injected by @Qualifier --> 
+       
+<bean id= "address" class="com.B09_c_AutoWiringAndQualifierDIUsingAnnotation.Address">
+	<property name="street" value="1455 NE Brandi Way"></property>
+	<property name="city" value="Pullman"></property>
+	<property name="state" value="WA"></property>
+</bean>
+<bean id= "address2" class="com.B09_c_AutoWiringAndQualifierDIUsingAnnotation.Address">
+	<property name="street" value="Sha Shahid"></property>
+	<property name="city" value="Kabul"></property>
+	<property name="state" value="Afgh"></property>
+</bean>
+<bean id= "address3" class="com.B09_c_AutoWiringAndQualifierDIUsingAnnotation.Address">
+	<property name="street" value="GHazni Street"></property>
+	<property name="city" value="Ghazni"></property>
+	<property name="state" value="Afg"></property>
+</bean>
+
+<bean id="emp" class="com.B09_c_AutoWiringAndQualifierDIUsingAnnotation.Employee">
+	<property name="id" value="101"></property>
+	<property name="name" value="Wahidullah Rahimi"></property>
+	<!-- we do not specify the address property of Employee as it is autowired -->
+	
+</bean>
+
+
+
+</beans>

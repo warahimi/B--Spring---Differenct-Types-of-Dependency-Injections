@@ -1,0 +1,5 @@
+Spring Auto Wiring:
+@Autiwired is used to implicitly inject an object into another bean
+it can be used for objective type only. it cannot be used for primitive or string values
+
+here autowiring by name is taken place

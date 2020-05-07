@@ -1,4 +1,4 @@
-package com.B09AutoWiringDI;
+package com.B09_a_AutoWiringDIUsingXmlFile;
 
 public class Employee {
 	private int id;

@@ -1,0 +1,13 @@
+the values in property file must be in key value pairs
+when we want to read from properties file we need to create a bean for ResourceBundleMessageSource
+
+click on SpringLibrary we have in our project ctl+shift+t > ResourceBundleMessageSource >WC>copy fully qualified name
+
+//inbuild bean
+<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource.class">
+	<property name="basenames">
+		<list>
+			<value>messages</value> <!-- give list of properties file without .properties extension from which you want to read -->
+		</list>
+	</property>
+</bean>

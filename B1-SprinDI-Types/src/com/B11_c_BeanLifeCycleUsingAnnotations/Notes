@@ -1,0 +1,18 @@
+Bean Life Cycle / Callback Methos: used if we want to perform some setup jobs before calling utility method or if we 
+want to perform some cleaning job after the task is completed before the bean is destroyed
+we can do them by defining init() which will be executed at the time of initialization and destroy() executed before 
+bean is destroyed
+
+there are 3 different ways for providing call back method in spring:
+1- Using interface : InitializingBean, DisposableBean // this is not a good practice because if we have 100s of beans / class and them
+all implement this interface is not ca good practice
+
+2-Defining our own init() and destroy() methods in class and config them in xml file: <bean id="emp" class="com.B11_b_BeanLifeCycleUsingXMLfile.Employee" init-method="init" destroy-method="destroy">
+or we can give the defaul-init-method="" and default-destroy-method="" in the <beans> to apply it for all beans creation at once
+the init() and destroy() method names must be the same then in all classes 
+
+3-Using Annotation @PostConstruct: defines the initialization method, @PreDestroy : 
+<context:annotation-config/> to activate the annotation
+
+
+@Required: used with setter method and makes it mandatory for the value to be injected

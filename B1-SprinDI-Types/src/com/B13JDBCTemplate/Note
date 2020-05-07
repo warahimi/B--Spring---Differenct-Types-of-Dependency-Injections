@@ -1,0 +1,8 @@
+How to perform Database connectivity using Spring framework 
+Spring frame work provided different telplates to perfom database connectivity and to perform operations on database
+-JDBC Template
+-Named Parameter (template)
+-Simple JDBC Template ...etc
+
+- here we will use the JDBC Template, we dont need think about establishing connection and closing connection
+Spring will hundle these,we can only concentrate on our business logic and give the queries to be fired

@@ -1,4 +1,4 @@
-package com.B09AutoWiringDI;
+package com.B09_b_AutoWiringDIUsingAnnotation;
 
 public class Address {
 	private String street,city,state;

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd"
+        default-init-method="init" default-destroy-method="destroy">
+
+	<context:annotation-config/>
+<!-- 						BEANS REQUIRED IN OUR CONFIG FILE -->
+<!-- 1 - the first bean to configure is the DriverManagerDataSource,using this bean we can get properties such as driver, url, username and password -->
+
+<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> <!-- ds = DataSource -->
+	<!-- Providing properties needed to establish db connection -->
+	<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+	<property name="url" value="jdbc:mysql://localhost:3306/employee"></property>
+	<property name="username" value="hbstudent"></property>
+	<property name="password" value="hbstudent"></property>
+</bean>
+
+<!-- 2- Now configure the bean for JDBC Template. used to obtain the DB  connection and fire the query -->
+<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+	<property name="dataSource" ref="ds"></property> <!-- injecting the DataSource we configure above -->
+</bean>
+
+
+<!-- 3 - Configure EmployeeDAO bean, which has different APIs for performing db operations -->
+<bean id="edao" class="com.B13JDBCTemplate.EmployeeDAO">
+	<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+</bean>
+
+</beans>
