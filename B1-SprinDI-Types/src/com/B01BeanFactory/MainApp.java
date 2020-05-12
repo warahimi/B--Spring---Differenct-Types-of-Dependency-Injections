@@ -1,10 +1,12 @@
 package com.B01BeanFactory;
 
 import org.springframework.beans.factory.BeanFactory;
+
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
+@SuppressWarnings("deprecation")
 public class MainApp {
 
 	public static void main(String[] args) {
@@ -15,7 +17,7 @@ public class MainApp {
 		Employee employee = beanFactory.getBean("emp", Employee.class);
 		System.out.println(employee);
 	
-
+		
 	}
 
 }

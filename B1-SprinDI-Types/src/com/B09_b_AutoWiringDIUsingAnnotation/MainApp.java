@@ -9,6 +9,9 @@ public class MainApp {
 		ApplicationContext context = new ClassPathXmlApplicationContext("B09_b_AutoWiringDIUsingAnnotation.xml");
 		Employee employee = context.getBean("emp", Employee.class);
 		System.out.println(employee);
+		
+		((ClassPathXmlApplicationContext)context).close();
+
 
 	}
 

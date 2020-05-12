@@ -9,6 +9,10 @@ public class MainApp {
 		ApplicationContext context = new ClassPathXmlApplicationContext("B03DIUsingConstructor.xml");
 		Employee employee = context.getBean("emp", Employee.class);
 		System.out.println(employee);
+		
+		
+		((ClassPathXmlApplicationContext)context).close();
+
 	}
 
 }

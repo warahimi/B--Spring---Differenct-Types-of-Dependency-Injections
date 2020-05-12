@@ -10,7 +10,8 @@ public class MainApp {
 		Employee employee = context.getBean("emp", Employee.class);
 		System.out.println(employee);
 		
-		
+		((ClassPathXmlApplicationContext)context).close();
+
 	}
  
 }

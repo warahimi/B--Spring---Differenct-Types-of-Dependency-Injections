@@ -9,6 +9,8 @@ public class MainApp {
 		ApplicationContext context = new ClassPathXmlApplicationContext("B04ObjectInjection.xml");
 		Employee employee = context.getBean("emp", Employee.class);
 		System.out.println(employee);
+		
+		((ClassPathXmlApplicationContext)context).close();
 
 	}
 
